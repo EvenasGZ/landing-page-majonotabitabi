@@ -94,16 +94,18 @@ body {
 
 /*  */
 .news {
-  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100vh;
+  padding: 5%;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .news-box1 {
-  position: absolute;
   width: 40%;
-  top: 40%;
-  left: 5%;
 }
 
 .news-box1 h1 {
@@ -116,46 +118,43 @@ body {
 }
 
 .news-box2 {
-  /* background-color: aqua; */
-  position: absolute;
   width: 50%;
-  top: 34%;
-  right: -10%;
-  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
 }
 
 .news-box2 img {
   width: 60%;
 }
 
-@media (max-width: 600px) {
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+  .news {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .news-box1,
+  .news-box2 {
+    width: 100%;
+  }
+
   .news-box1 {
-    position: absolute;
-    width: 80%;
-    top: 20%;
-  }
-
-  .news-box1 h1 {
-    font-size: 50px;
-    margin-top: 10px;
-  }
-
-  .news-box1 img {
-    width: 70%;
+    order: 1;
+    padding-top: 20%;
   }
 
   .news-box2 {
-    /* background-color: aqua; */
-    position: absolute;
-    width: 50%;
-    top: calc(60% - 4px);
-    left: 0;
-    padding: 0;
-    background-color: #ffcc00;
+    order: 2;
+    justify-content: center;
+    margin-top: 20px;
   }
 
   .news-box2 img {
-    width: 130%;
+    width: 80%;
   }
 }
 
