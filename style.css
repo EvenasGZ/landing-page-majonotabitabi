@@ -172,14 +172,66 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+  background-color: #180e27;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 560px; /* Batas maksimum biar nggak terlalu besar di desktop */
+  aspect-ratio: 16 / 9; /* Menjaga proporsi video */
+  margin: auto; /* Tengahin */
+}
+
+.frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.synopsis {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-synopsis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.btn-synopsis p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #180e27;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  font-weight: bold;
+}
+
+.btn-synopsis p:hover {
+  cursor: pointer;
+}
+
+.text-synopsis {
+  margin-top: 20px;
+  width: 90%;
+  height: 80%;
+  background-image: url(asset/);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .story {
     flex-direction: column;
-  }
-  .frame {
-    width: 100%;
   }
   .synopsis {
     width: 100%;
@@ -190,56 +242,6 @@ body {
     width: 50%;
   }
   .synopsis {
-    width: 500%;
+    width: 50%;
   }
-}
-
-.frame {
-  background-color: red;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.synopsis {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-synopsis {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  /* background-color: aqua; */
-  margin: 20px;
-}
-
-.btn-synopsis p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
-  background-color: #180e27;
-  color: white;
-  border-radius: 50%;
-  width: 10px;
-  height: 20px;
-  font-weight: bold;
-}
-
-.btn-synopsis p:hover {
-  cursor: pointer;
-}
-
-.text-synopsis {
-  width: 90%;
-  height: 80%;
-  background-color: aqua;
-  background-image: url(asset/);
 }
