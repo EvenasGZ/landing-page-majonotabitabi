@@ -231,7 +231,7 @@ body {
 
 @media (max-width: 768px) {
   .story {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .synopsis {
     width: 100%;
