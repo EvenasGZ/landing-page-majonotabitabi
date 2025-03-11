@@ -7,7 +7,8 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
-  background-image: url(asset/top-story-bg.jpg);
+  /* background-image: url(asset/top-story-bg.jpg); */
+  background-color: #180e27;
 }
 
 .navbar {
@@ -106,6 +107,7 @@ body {
   padding: 5%;
   box-sizing: border-box;
   position: relative;
+  color: white;
 }
 
 .news-box1 {
@@ -168,6 +170,7 @@ body {
 }
 
 .story {
+  position: relative;
   background-image: url(asset/common-bg-ptn.jpg);
   width: 100%;
   height: 100vh;
@@ -181,6 +184,7 @@ body {
   max-width: 560px; /* Batas maksimum biar nggak terlalu besar di desktop */
   aspect-ratio: 16 / 9; /* Menjaga proporsi video */
   margin: auto; /* Tengahin */
+  z-index: 2;
 }
 
 .frame iframe {
@@ -235,6 +239,15 @@ body {
   }
   .synopsis {
     width: 100%;
+    margin-top: 10%;
+  }
+  .frame {
+    padding: 10px;
+  }
+  .elaina {
+    position: absolute;
+    /* background-color: #ffcc00; */
+    z-index: 0;
   }
 }
 @media (min-width: 768px) {
@@ -244,4 +257,23 @@ body {
   .synopsis {
     width: 50%;
   }
+}
+
+.elaina {
+  position: absolute;
+  /* background-color: #ffcc00; */
+  bottom: 0px;
+  opacity: 1;
+  z-index: 0;
+}
+
+.elaina img {
+  width: 65%;
+  padding: -20px;
+  margin: -4px;
+}
+
+.books {
+  background-image: url(asset/top-story-bg.jpg);
+  height: 100vh;
 }
